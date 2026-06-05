@@ -81,3 +81,33 @@ body {
 .uwnba-year[aria-pressed="true"] {
   font-weight: 600;
 }
+
+/* ---- Animations ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---- Stat numbers ---- */
+.uwnba-stat-num {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(180deg, #822669 0%, #bd1380 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

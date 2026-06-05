@@ -9,15 +9,12 @@ import {
   type YearKey,
 } from "@/data/years";
 
-const ACTIVE_TAB_CLIP =
-  "polygon(0 0, calc(100% - 9px) 0, 100% 50%, calc(100% - 9px) 100%, 0 100%)";
-
 export default function Hero() {
   const [activeYear, setActiveYear] = useState<YearKey>(DEFAULT_YEAR);
   const banner = YEAR_DATA[activeYear];
 
   return (
-    <section className="w-full px-4 pt-4 pb-2">
+    <section className="w-full px-4 pt-6 pb-2">
       <div className="mx-auto w-full max-w-[1180px]">
         {/* Banner card with the overlaid year nav */}
         <div className="relative overflow-hidden rounded-2xl bg-[#2b0e3e] shadow-[0_10px_40px_-12px_rgba(43,14,62,0.5)]">
@@ -45,42 +42,19 @@ export default function Hero() {
 
           {/* Year navigation pill (top-right) */}
           <nav className="absolute right-4 top-4 z-10 sm:right-6 sm:top-5">
-            <div className="flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1.5 shadow-[0_2px_10px_rgba(43,14,62,0.30)]">
-              <span
-                className="px-2 text-sm font-bold tracking-[0.12em]"
-                style={{ fontFamily: "var(--font-serif-en)", color: "#5e1a52" }}
-              >
-                UWNBA
-              </span>
-
-              {YEARS.map((year) => {
-                const isActive = year === activeYear;
-                return (
-                  <button
-                    key={year}
-                    type="button"
-                    onClick={() => setActiveYear(year)}
-                    aria-pressed={isActive}
-                    className={
-                      isActive
-                        ? "text-sm font-semibold text-white"
-                        : "rounded-full px-2.5 py-1 text-sm font-medium text-[#7a2a6e] transition hover:bg-[#5e1a52]/10"
-                    }
-                    style={
-                      isActive
-                        ? {
-                            clipPath: ACTIVE_TAB_CLIP,
-                            padding: "5px 20px 5px 14px",
-                            background:
-                              "linear-gradient(90deg, #531779 0%, #6a1479 35%, #c21080 100%)",
-                          }
-                        : undefined
-                    }
-                  >
-                    {toBengaliNumber(year)}
-                  </button>
-                );
-              })}
+            <div className="uwnba-yearnav">
+              <span className="uwnba-brand">UWNBA</span>
+              {YEARS.map((year) => (
+                <button
+                  key={year}
+                  type="button"
+                  className="uwnba-year"
+                  aria-pressed={year === activeYear}
+                  onClick={() => setActiveYear(year)}
+                >
+                  {toBengaliNumber(year)}
+                </button>
+              ))}
             </div>
           </nav>
         </div>
