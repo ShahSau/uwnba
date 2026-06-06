@@ -4,6 +4,7 @@ import Intro from "@/components/Intro";
 import Winners from "@/components/Winners";
 import NewsCarousel from "@/components/NewsCarousel";
 import VideoSection from "@/components/Videosection";
+import GalaGallery from "@/components/GalaGallery";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Winners />
         <NewsCarousel />
         <VideoSection />
+        <GalaGallery />
       </YearProvider>
     </main>
   );
