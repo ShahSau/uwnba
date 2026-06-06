@@ -13,20 +13,20 @@
   --uwnba-pill-active: #703a74;
   --uwnba-headline: #4a1542;
 
-  --font-bn-num: "Noto Sans Bengali Variable", "Noto Sans Bengali", "Hind Siliguri", ui-sans-serif, sans-serif;
+  --font-bn-num: "Noto Sans Bengali Variable", "Noto Sans Bengali", ui-sans-serif, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-bn: "Hind Siliguri", ui-sans-serif, system-ui, sans-serif;
+  --font-bn: "Noto Sans Bengali Variable", "Noto Sans Bengali", ui-sans-serif, system-ui, sans-serif;
   --font-serif-en: Georgia, "Times New Roman", serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Hind Siliguri", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Noto Sans Bengali Variable", "Noto Sans Bengali", ui-sans-serif, system-ui, sans-serif;
 }
 
 /* ---- Year navigation (timeline) ---- */

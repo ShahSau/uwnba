@@ -1,16 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import {
-  YEARS,
-  YEAR_DATA,
-  DEFAULT_YEAR,
-  toBengaliNumber,
-  type YearKey,
-} from "@/data/years";
+import { useYear } from "@/context/YearContext";
+import { YEARS, YEAR_DATA, toBengaliNumber } from "@/data/years";
 
 export default function Hero() {
-  const [activeYear, setActiveYear] = useState<YearKey>(DEFAULT_YEAR);
+  const { year: activeYear, setYear: setActiveYear } = useYear();
   const banner = YEAR_DATA[activeYear];
 
   return (
