@@ -30,31 +30,33 @@ function PinIcon() {
   );
 }
 
-export default function SiteFooter() {
+export default function SiteFooter({ showCta = true }: { showCta?: boolean }) {
   const year = new Date().getFullYear();
 
   return (
     <>
       {/* Call to action */}
-      <section className="w-full px-4 py-14 text-center sm:py-20">
-        <Reveal>
-          <h2 className="mx-auto max-w-3xl text-2xl font-semibold text-[#2f2f33] sm:text-3xl">
-            আপনার চেনা আছে কোনো জাতি গড়ার অজানা যোদ্ধা?
-          </h2>
-          <Link
-            href="/nominate"
-            className="mt-6 inline-block rounded-md px-7 py-2.5 text-base font-semibold text-white shadow-md ring-1 ring-white/20 transition hover:brightness-110 active:scale-[0.99]"
-            style={{
-              background: "linear-gradient(180deg, #822669 0%, #bd1380 100%)",
-            }}
-          >
-            এখনই আবেদন করুন
-          </Link>
-        </Reveal>
-      </section>
+      {showCta && (
+        <section className="w-full px-4 py-14 text-center sm:py-20">
+          <Reveal>
+            <h2 className="mx-auto max-w-3xl text-2xl font-semibold text-[#2f2f33] sm:text-3xl">
+              আপনার চেনা আছে কোনো জাতি গড়ার অজানা যোদ্ধা?
+            </h2>
+            <Link
+              href="/nominate"
+              className="mt-6 inline-block rounded-md px-7 py-2.5 text-base font-semibold text-white shadow-md ring-1 ring-white/20 transition hover:brightness-110 active:scale-[0.99]"
+              style={{
+                background: "linear-gradient(180deg, #822669 0%, #bd1380 100%)",
+              }}
+            >
+              এখনই আবেদন করুন
+            </Link>
+          </Reveal>
+        </section>
+      )}
 
       {/* Contact */}
-      <section className="w-full px-4 pb-12 text-center">
+      <section className="w-full px-4 pb-12 pt-12 text-center">
         <Reveal>
           <h2 className="text-2xl font-semibold text-[#2f2f33]">
             যোগাযোগ করুন

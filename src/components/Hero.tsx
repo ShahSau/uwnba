@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useYear } from "@/context/YearContext";
 import { YEARS, YEAR_DATA, toBengaliNumber } from "@/data/years";
 
-export default function Hero() {
+export default function Hero({ showCta = true }: { showCta?: boolean }) {
   const { year: activeYear, setYear: setActiveYear } = useYear();
   const banner = YEAR_DATA[activeYear];
 
@@ -55,27 +55,29 @@ export default function Hero() {
         </div>
 
         {/* Headline + call to action */}
-        <div className="flex flex-col items-center pt-8 pb-4 text-center">
-          <h1
-            className="text-2xl font-semibold leading-snug sm:text-3xl"
-            style={{ color: "var(--uwnba-headline)" }}
-          >
-            জাতি গড়ার
-            <br />
-            অচেনা নারী যোদ্ধাদের জানাই আহ্বান
-          </h1>
+        {showCta && (
+          <div className="flex flex-col items-center pt-8 pb-4 text-center">
+            <h1
+              className="text-2xl font-semibold leading-snug sm:text-3xl"
+              style={{ color: "var(--uwnba-headline)" }}
+            >
+              জাতি গড়ার
+              <br />
+              অচেনা নারী যোদ্ধাদের জানাই আহ্বান
+            </h1>
 
-          <Link
-            href="/nominate"
-            className="mt-6 inline-block rounded-md px-8 py-2.5 text-base font-semibold uppercase tracking-wide text-white shadow-md ring-1 ring-white/20 transition hover:brightness-110 active:scale-[0.99]"
-            style={{
-              fontFamily: "var(--font-serif-en)",
-              background: "linear-gradient(180deg, #822669 0%, #bd1380 100%)",
-            }}
-          >
-            Nominate Now
-          </Link>
-        </div>
+            <Link
+              href="/nominate"
+              className="mt-6 inline-block rounded-md px-8 py-2.5 text-base font-semibold uppercase tracking-wide text-white shadow-md ring-1 ring-white/20 transition hover:brightness-110 active:scale-[0.99]"
+              style={{
+                fontFamily: "var(--font-serif-en)",
+                background: "linear-gradient(180deg, #822669 0%, #bd1380 100%)",
+              }}
+            >
+              Nominate Now
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

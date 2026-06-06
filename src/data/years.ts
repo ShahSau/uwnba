@@ -33,17 +33,17 @@ export interface YearData {
 }
 
 export const YEAR_DATA: Record<YearKey, YearData> = {
-  "2023": { year: "2023", bannerSrc: null, bannerAlt: "UWNBA 2023 award winners" },
+  "2023": { year: "2023", bannerSrc: "/web_banner.png", bannerAlt: "UWNBA 2023 award winners" },
   "2022": {
     year: "2022",
     bannerSrc: "/web_banner.png",
     bannerAlt: "UWNBA 2022 award winners",
   },
-  "2021": { year: "2021", bannerSrc: null, bannerAlt: "UWNBA 2021 award winners" },
-  "2020": { year: "2020", bannerSrc: null, bannerAlt: "UWNBA 2020 award winners" },
-  "2019": { year: "2019", bannerSrc: null, bannerAlt: "UWNBA 2019 award winners" },
-  "2018": { year: "2018", bannerSrc: null, bannerAlt: "UWNBA 2018 award winners" },
-  "2017": { year: "2017", bannerSrc: null, bannerAlt: "UWNBA 2017 award winners" },
+  "2021": { year: "2021", bannerSrc: "/web_banner.png", bannerAlt: "UWNBA 2021 award winners" },
+  "2020": { year: "2020", bannerSrc: "/web_banner.png", bannerAlt: "UWNBA 2020 award winners" },
+  "2019": { year: "2019", bannerSrc: "/web_banner.png", bannerAlt: "UWNBA 2019 award winners" },
+  "2018": { year: "2018", bannerSrc: "/web_banner.png", bannerAlt: "UWNBA 2018 award winners" },
+  "2017": { year: "2017", bannerSrc: "/web_banner.png", bannerAlt: "UWNBA 2017 award winners" },
 };
 
 const BN_DIGITS = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
