@@ -5,6 +5,8 @@ import Winners from "@/components/Winners";
 import NewsCarousel from "@/components/NewsCarousel";
 import VideoSection from "@/components/Videosection";
 import GalaGallery from "@/components/GalaGallery";
+import Testimonials from "@/components/Testimonials";
+import SiteFooter from "@/components/SiteFooter";
 
 export default function Home() {
   return (
@@ -16,7 +18,9 @@ export default function Home() {
         <NewsCarousel />
         <VideoSection />
         <GalaGallery />
+        <Testimonials />
       </YearProvider>
+      <SiteFooter />
     </main>
   );
 }

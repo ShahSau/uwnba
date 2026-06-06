@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useYear } from "@/context/YearContext";
 import { YEARS, YEAR_DATA, toBengaliNumber } from "@/data/years";
 
@@ -64,16 +65,16 @@ export default function Hero() {
             অচেনা নারী যোদ্ধাদের জানাই আহ্বান
           </h1>
 
-          <button
-            type="button"
-            className="mt-6 rounded-md px-8 py-2.5 text-base font-semibold uppercase tracking-wide text-white shadow-md ring-1 ring-white/20 transition hover:brightness-110 active:scale-[0.99]"
+          <Link
+            href="/nominate"
+            className="mt-6 inline-block rounded-md px-8 py-2.5 text-base font-semibold uppercase tracking-wide text-white shadow-md ring-1 ring-white/20 transition hover:brightness-110 active:scale-[0.99]"
             style={{
               fontFamily: "var(--font-serif-en)",
               background: "linear-gradient(180deg, #822669 0%, #bd1380 100%)",
             }}
           >
             Nominate Now
-          </button>
+          </Link>
         </div>
       </div>
     </section>
