@@ -18,16 +18,11 @@ export const YEARS: readonly YearKey[] = [
   "2017",
 ] as const;
 
-// Active pill on load. Set to "2022" to mirror the reference screenshot;
-// change this one line to default to any other year.
-export const DEFAULT_YEAR: YearKey = "2022";
+
+export const DEFAULT_YEAR: YearKey = "2023";
 
 export interface YearData {
   year: YearKey;
-  /**
-   * Path to that year's banner artwork under /public, e.g. "/banners/2022.png".
-   * Leave null to show the placeholder until you drop in the real image.
-   */
   bannerSrc: string | null;
   bannerAlt: string;
 }

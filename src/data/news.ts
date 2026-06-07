@@ -2,9 +2,7 @@ import type { YearKey } from "./years";
 
 export interface NewsItem {
   title: string;
-  /** Photo under /public, e.g. /news/2022/news-1.jpg */
   image: string;
-  /** Article URL (opens in a new tab). */
   link: string;
 }
 
